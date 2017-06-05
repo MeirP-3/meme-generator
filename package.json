@@ -1,0 +1,21 @@
+{
+  "name": "responsive-page",
+  "version": "1.0.0",
+  "description": "psd to html ",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel serve styles",
+    "serve": "live-server",
+    "styles": "node-sass -w css/main.scss css/main.css"
+  },
+  "author": "tamiross",
+  "license": "ISC",
+  "dependencies": {
+    "i": "^0.3.5",
+    "node-sass": "^4.5.3",
+    "npm": "^5.0.2",
+    "npm-run-all": "^4.0.2",
+    "scss-compile": "^0.1.7",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
