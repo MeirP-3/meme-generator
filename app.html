@@ -12,30 +12,53 @@
 </head>
 
 <body>
-    <div class="controls">
-        <div class="control top">
+
+    <div class="controls top">
+        <div class="txt">
             <textarea placeholder="Enter top text"></textarea>
             <div class="btn-toolbar">
+                <div class="btn-group">
+                    <button class="btn btn-primary color">choose color</button>
+                </div>
 
+                <input hidden type="color" />
+                
+                <div class="btn-group">
+                    <button class="btn btn-primary" data-align="left">left</button>
+                    <button class="btn btn-primary" data-align="right">right</button>
+                    <button class="btn btn-primary" data-align="center">center</button>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="canvas-container">
-        <canvas id="meme"></canvas>
+        <canvas></canvas>
     </div>
-    <div class="controls">
-        <div class="cotrol bottom">
-            <textarea placeholder="Enter bottom text"></textarea>
-            <div class="btn-toolbar">
 
+    <div class="controls bottom">
+        <div class="txt">
+            <textarea placeholder="Enter bottom text"></textarea>
+        </div>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button class="btn btn-primary color">choose color</button>
+            </div>
+            <input hidden type="color" />
+            <div class="btn-group">
+                <button class="btn btn-primary" data-align="left">left</button>
+                <button class="btn btn-primary" data-align="right">right</button>
+                <button class="btn btn-primary" data-align="center">center</button>
             </div>
         </div>
     </div>
+
     <script src="src/lib/jquery/jquery-3.2.1.min.js"></script>
     <script src="src/js/imgs.js"></script>
     <script src="src/js/render.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/test.js"></script>
+
 </body>
 
 </html>
