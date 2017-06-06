@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+// * {
+//     border: 1px solid #f4f3f3;
+// }
+
 // Basic HTML elements
 
 
@@ -10,5 +14,10 @@ body {
   color: white;
   background: #550000;
   margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 

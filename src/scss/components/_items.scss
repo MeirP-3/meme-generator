@@ -1,0 +1,24 @@
+
+.item-container {
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+   border: {
+       top: 1px solid rgba(255,255,255,0.5);
+       bottom: 1px solid rgba(255,255,255,0.5);
+   }
+}
+
+.item-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item-img {
+    & img {
+        width: 80px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+}

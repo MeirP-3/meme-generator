@@ -6,6 +6,10 @@ body {
   background: #550000;
   margin: 0; }
 
+main {
+  display: flex;
+  flex-direction: column; }
+
 /*----------  Playfair Font  ----------*/
 @font-face {
   font-family: 'Playfair';
@@ -16,6 +20,23 @@ body {
   font-family: 'Ubunto';
   src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
   font-weight: 400; }
+
+.item-container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+
+.item-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.item-img img {
+  width: 80px;
+  max-width: 80px;
+  max-height: 80px; }
 
 .clean-list {
   list-style: none; }
@@ -45,14 +66,28 @@ footer {
   height: 30px;
   background: #801515; }
 
-div {
-  border: 1px solid #f4f3f3; }
-
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 60px;
   background: #801515; }
-  @media screen and (max-width: 480px) {
-    header h1 {
-      display: none; } }
+  header div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    display: none; } }
+
+header .icon {
+  font-size: 2.1em;
+  cursor: pointer; }
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6); }
+
+.search-container input {
+  background: #D46A6A;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white; }
