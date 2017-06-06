@@ -1,6 +1,6 @@
 
 
-var gImages = [
+var gImgs = [
     {
         id: 1,
         url: {
