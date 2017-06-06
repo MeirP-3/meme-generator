@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box; }
+
+header {
+  height: 60px;
+  background: #333; }
+
+/*----------  Playfair Font  ----------*/
+@font-face {
+  font-family: 'Playfair';
+  src: url("../assets/fonts/playfair/PlayfairDisplay-Regular.ttf"); }
+
+/*----------  Ubunto Font  ----------*/
+@font-face {
+  font-family: 'Ubunto';
+  src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
+  font-weight: 400; }
+
+@media screen and (min-width: 481px) {
+  body {
+    background: lightpink; } }
+
+@media screen and (min-width: 786px) {
+  body {
+    background: lightblue; } }
+
+@media screen and (min-width: 1024px) {
+  body {
+    background: yellow; } }
