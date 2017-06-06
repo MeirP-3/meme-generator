@@ -1,0 +1,20 @@
+div {
+    border: 1px solid #f4f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background: #801515;
+
+    h1 {
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+}
+
+.search-container {
+    // display: flex;
+}

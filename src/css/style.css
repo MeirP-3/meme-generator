@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box; }
 
-header {
-  height: 60px;
-  background: #333; }
+body {
+  color: white;
+  background: #550000;
+  margin: 0; }
 
 /*----------  Playfair Font  ----------*/
 @font-face {
@@ -36,3 +37,22 @@ header {
 @media screen and (min-width: 1024px) {
   body {
     background: yellow; } }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background: #801515; }
+
+div {
+  border: 1px solid #f4f3f3; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background: #801515; }
+  @media screen and (max-width: 480px) {
+    header h1 {
+      display: none; } }

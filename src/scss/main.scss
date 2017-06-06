@@ -2,9 +2,9 @@
 
 // === base ===
 
-@import 'base/base';
+@import 'base/base'; 
 @import 'base/typography';
-
+ 
 // == components ===
 
 @import 'components/buttons';
@@ -19,7 +19,7 @@
 @import 'helpers/variables';
 
 // == layout ===
-
+    
 @import 'layout/grid';
 @import 'layout/footer';
 @import 'layout/forms';

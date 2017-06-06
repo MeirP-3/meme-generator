@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel server styles",
     "server": "live-server",
-    "styles": "node-sass -w assets/scss/main.scss assets/css/style.css"
+    "styles": "node-sass -w src/scss/main.scss src/css/style.css"
   },
   
   "author": "tamiross",
