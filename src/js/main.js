@@ -1,5 +1,7 @@
 'use strict'
 
+var gSelectedImgUrl;
+
 function createTagCloud() {
 
 }
