@@ -16,6 +16,15 @@ header {
   src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
   font-weight: 400; }
 
+.clean-list {
+  list-style: none; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%; }
+
 @media screen and (min-width: 481px) {
   body {
     background: lightpink; } }
