@@ -1,0 +1,30 @@
+
+.about-container{
+    padding-top: 20px;
+    padding-bottom:100px;
+    display: flex-column;
+    background: pink;
+
+
+    .dev-container{
+        display: flex-column;
+        margin-top:50px;
+
+        h3{
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 2em;
+        }
+
+        h4{
+             display: flex;
+            justify-content: flex-end;
+            margin-right: 2em;
+        }
+
+        img{
+             display: flex;
+           margin: auto;
+        }
+    }
+}
