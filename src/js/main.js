@@ -30,7 +30,7 @@ function filter() {
 }
 
 function toggleSearchBox() {
-    var elSearchBox = document.querySelector('.search-container input');
+    var elSearchBox = document.querySelector('.search-container');
     var elNavBar = document.querySelector('.navigation');
     if (elSearchBox.classList.contains('hidden')) {
         elSearchBox.classList.remove('hidden');

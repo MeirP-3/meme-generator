@@ -1,5 +1,6 @@
 @media screen and (min-width: $xs) {
     div.item-container {
+        margin: 0.3em;
         width: auto;
         height: auto;
         flex-direction: column;
@@ -46,6 +47,7 @@
             @media screen and (min-width: $xs) {
                 width: 150px;
                 height:150px;
+                margin: 1em 0;
             }
 
         & img {

@@ -12,11 +12,9 @@
 </head>
 <body>
     
+    <header class="">
 
-    </div>
-    <header class="col-lg-2">
-
-        <div class="menu">
+        <div class="menu container-wrap">
             <i class="icon fa fa-bars glyphicon glyphicon-search" aria-hidden="true"></i>
             <div class="navigation">
                 <ul class="nav-items nav-setup">
@@ -32,8 +30,8 @@
         <div class="title hidden">
             <h2>Meme creator</h2>
         </div>
-        <div class="search-container">
-            <input type="search" placeholder="Search Meme" class="hidden">
+        <div class="search-container" class="hidden">
+            <input type="search" placeholder="Search Meme" >
         </div>
         <div class="search-icon" onclick="toggleSearchBox()">
             <i class="icon fa fa-search" aria-hidden="true"></i>
@@ -42,7 +40,7 @@
 
     <main>
 
-        <div class="content">
+        <div class="content container-wrap">
             <div class="items-wraper">
             <div class="item-container">
                 
@@ -152,34 +150,50 @@
 
 <!--------------------------ABOUT-------------------------->
 
-    <div class="about-container">
-       <h1 id="about">About us</h1>
-        
-        <div class="dev-container">
-            <h3>Tamir Kitay</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-3-sm.jpg"/> <!--developer image-->
-        </div>
+    <div id="about" class="about-section">
+        <div class="container-wrap">
+            <h1>About us</h1>
+                
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
-        <div class="dev-container">
-             <h3>Meir</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-2-sm.jpg"/> <!--developer image-->
-        </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
-        <div class="dev-container">
-             <h3>Moshe Mantsur</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-1-sm.png"/> <!--developer image-->
-        </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
-    </div>
+        </div>
 
 <!-------------------------- CONTACT -------------------------->
 
-    <div class="contact-section">
+    <div id="contact" class="contact-section container-wrap">
 
-        <h1 id="contact">Contact us</h1>
+        <h1 >Contact us</h1>
 
         <div class="form-contact">
             <form action="action.php" class="">
