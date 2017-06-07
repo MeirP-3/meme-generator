@@ -22,3 +22,10 @@
     }
 }
 
+.menu {
+    .icon {
+        @media screen and (min-width: $xs) {
+                display: none;
+          }
+        }
+    }

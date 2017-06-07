@@ -18,12 +18,6 @@ main {
 .hover:hover {
   cursor: pointer; }
 
-.hidden {
-  display: none; }
-
-.visible {
-  visibility: visible; }
-
 a {
   text-decoration: none;
   color: white; }
@@ -51,6 +45,10 @@ a {
 .navigation a:hover {
   border-top: 1px solid rgba(225, 255, 255, 0.6);
   border-bottom: 1px solid rgba(225, 255, 255, 0.6); }
+
+@media screen and (min-width: 400px) {
+  .menu .icon {
+    display: none; } }
 
 @media screen and (min-width: 400px) {
   div.item-container {
@@ -131,6 +129,12 @@ a {
   align-items: center; }
   .nav-setup li {
     margin: 5px 10px; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  visibility: visible; }
 
 footer {
   bottom: 0;

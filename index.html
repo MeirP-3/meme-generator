@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Meme generator</title>
-    <link rel="stylesheet" src="src/lib/fa/css/fa.min.css">
+    <link rel="stylesheet" href="src/lib/fa/css/fa.min.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="./src/lib/bootstrap/css/bootstrap.min.css"></script>
-    <script src="./src/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="src/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/lib/bootstrap/js/bootstrap.min.js">-->
 
-    <script src="https://use.fontawesome.com/ba14a1b9f1.js"></script>
+    <!--<script src="https://use.fontawesome.com/ba14a1b9f1.js"></script>-->
 </head>
 <body>
     
@@ -35,7 +35,7 @@
         <div class="search-container">
             <input type="search" placeholder="Search Meme" class="hidden">
         </div>
-        <div class="search-icon" onclick="showSearchBox()">
+        <div class="search-icon" onclick="toggleSearchBox()">
             <i class="icon fa fa-search" aria-hidden="true"></i>
         </div>
     </header>
@@ -45,9 +45,12 @@
         <div class="content">
             <div class="items-wraper">
             <div class="item-container">
-                <a href="#">
+                
                 <div class="item-img">
-                    <img src="assets/img/sm/img-1-sm.png" />
+                </a>
+                   <a href="#"> 
+                       <img src="assets/img/sm/img-1-sm.png" />
+                   </a>
                 </div>
                 <div class="item-title">
                     <h3>Item title</h3>
@@ -55,7 +58,6 @@
                 <div class="item-star">
                     <i class="star fa fa-star" aria-hidden="true"></i>
                 </div>
-                </a>
             </div>
             <div class="item-container">
                 <div class="item-img">
