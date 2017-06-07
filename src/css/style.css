@@ -28,11 +28,6 @@ a {
     color: white; }
 
 /*----------  Source Sans Pro  ----------*/
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url("assets/fonts/SourceSansPro/SourceSansPro-Black.ttf");
-  font-weight: 400; }
-
 .navigation {
   display: none;
   font-family: 'Source Sans Pro', sans-serif;
@@ -145,24 +140,23 @@ footer {
   background: #550000; }
 
 header {
+  border: 1px solid yellow;
   width: 100%;
-  padding: 1% 4%;
   display: flex;
   justify-content: space-between;
   height: 60px;
   background: #801515;
-  background: linear-gradient(to bottom, #a82b46 2%, #8f0222 56%, #801515 100%); }
+  background: linear-gradient(to bottom, #a82b46 2%, #8f0222 56%, #801515 100%);
+  box-shadow: inset 0 0 11px rgba(255, 255, 255, 0.4); }
   header div {
     display: flex;
+    flex-basis: 100%;
     justify-content: space-between;
     align-items: center; }
 
-header .header-container {
+header .nav-container {
+  outline: 2px dashed black;
   width: 100%; }
-
-header .icon {
-  font-size: 2.1em;
-  cursor: pointer; }
 
 .search-container {
   width: 80%; }
@@ -183,11 +177,6 @@ header .icon {
     background: #D46A6A;
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white; }
-
-@media screen and (min-width: 400px) {
-  header {
-    padding: 0;
-    justify-content: center; } }
 
 .about-section {
   width: 100%;
