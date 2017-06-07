@@ -33,8 +33,7 @@ var gImgs = [
         },
         keywords: [
             'danger',
-            'security',
-            'corrupt'
+            'scary'
         ]
     },
     {
