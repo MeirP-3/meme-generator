@@ -32,12 +32,12 @@ function filter() {
 function showSearchBox() {
     var box = document.querySelector('.search-container input');
     if (box.classList.contains('hidden')) {
-        box.classList.remove('hidden'); 
+        box.classList.remove('hidden');
     } else {
         box.classList.add('hidden');
     }
-    
-}   
+
+}
 // update top text in model on any change
 $('.top textarea').keyup(function () {
     var content = $(this).val();
@@ -52,37 +52,82 @@ $('.bottom textarea').keyup(function () {
     drawCanvas();
 });
 
-// update color
+///////////////////////////////// update color ///////////////////////////////////////////
 
 //top
-$('.top .color').click(function() {
+$('.top .color').click(function () {
     var colorInput = $('.top [type = color]')[0];
     colorInput.click();
 });
 
-$('.top [type = color]').change(function() {
+$('.top [type = color]').change(function () {
     gState.txts[0].color = $(this).val();
     drawCanvas();
 });
 
 //bottom
-$('.bottom .color').click(function() {
+$('.bottom .color').click(function () {
     var colorInput = $('.bottom [type = color]')[0];
     colorInput.click();
 });
 
-$('.bottom [type = color]').change(function() {
+$('.bottom [type = color]').change(function () {
     gState.txts[1].color = $(this).val();
     drawCanvas();
 });
 
-// update text-align
-$('.top [data-align]').click(function() {
+/////////////////////////////////////// update text-align /////////////////////////////////////////////
+$('.top [data-align]').click(function () {
     gState.txts[0].align = $(this).attr('data-align');
     drawCanvas();
 });
 
-$('.bottom [data-align]').click(function() {
+$('.bottom [data-align]').click(function () {
     gState.txts[1].align = $(this).attr('data-align');
+    drawCanvas();
+});
+
+//////////////////////////////////// update font size /////////////////////////////////////////////////
+
+// TODO: handle max & min
+
+$('.top [data-increase]').click(function () {
+    var currentSize = parseInt(gState.txts[0].fontSize);
+    var updatedSize = currentSize + 2;
+    gState.txts[0].fontSize = updatedSize + 'px';
+    drawCanvas();
+});
+
+$('.top [data-decrease]').click(function () {
+    var currentSize = parseInt(gState.txts[0].fontSize);
+    var updatedSize = currentSize - 2;
+    gState.txts[0].fontSize = updatedSize + 'px';
+    drawCanvas();
+});
+
+$('.bottom [data-increase]').click(function () {
+    var currentSize = parseInt(gState.txts[1].fontSize);
+    var updatedSize = currentSize + 2;
+    gState.txts[1].fontSize = updatedSize + 'px';
+    drawCanvas();
+});
+
+$('.bottom [data-decrease]').click(function () {
+    var currentSize = parseInt(gState.txts[1].fontSize);
+    var updatedSize = currentSize - 2;
+    gState.txts[1].fontSize = updatedSize + 'px';
+    drawCanvas();
+});
+
+/////////////////////////////////////// clear textarea ///////////////////////////////////////////////
+$('.top [data-clear]').click(function() {
+    $('.top textarea')[0].value = '';
+    gState.txts[0].content = '';
+    drawCanvas();
+});
+
+$('.bottom [data-clear]').click(function() {
+    $('.bottom textarea')[0].value = '';
+    gState.txts[1].content = '';
     drawCanvas();
 });
