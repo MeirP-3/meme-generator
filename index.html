@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Meme generator</title>
-    <link rel="stylesheet" src="src/lib/fa/css/fa.min.css">
+    <link rel="stylesheet" href="src/lib/fa/css/fa.min.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="./src/lib/bootstrap/css/bootstrap.min.css">
     
 </head>
 <body>
     
+    <header class="">
 
-    </div>
-    <header class="col-lg-2">
-
-        <div class="menu">
+        <div class="menu container-wrap">
             <i class="icon fa fa-bars glyphicon glyphicon-search" aria-hidden="true"></i>
             <div class="navigation">
                 <ul class="nav-items nav-setup">
@@ -30,22 +28,30 @@
         <div class="title hidden">
             <h2>Meme creator</h2>
         </div>
+<<<<<<< HEAD
         <div class="search-container">
-            <input type="search" placeholder="Search Meme" class="hidden">
+            <input type="search" placeholder="Search Meme" id= "search-box" class="hidden">
+=======
+        <div class="search-container" class="hidden">
+            <input type="search" placeholder="Search Meme" >
+>>>>>>> 2b384d108882731f8a862bcb1076f3e0507a3668
         </div>
-        <div class="search-icon" onclick="showSearchBox()">
+        <div class="search-icon" onclick="toggleSearchBox()">
             <i class="icon fa fa-search" aria-hidden="true"></i>
         </div>
     </header>
 
     <main>
 
-        <div class="content">
+        <div class="content container-wrap">
             <div class="items-wraper">
             <div class="item-container">
-                <a href="#">
+                
                 <div class="item-img">
-                    <img src="assets/img/sm/img-1-sm.png" />
+                </a>
+                   <a href="#"> 
+                       <img src="assets/img/sm/img-1-sm.png" />
+                   </a>
                 </div>
                 <div class="item-title">
                     <h3>Item title</h3>
@@ -53,7 +59,6 @@
                 <div class="item-star">
                     <i class="star fa fa-star" aria-hidden="true"></i>
                 </div>
-                </a>
             </div>
             <div class="item-container">
                 <div class="item-img">
@@ -148,34 +153,54 @@
 
 <!--------------------------ABOUT-------------------------->
 
-    <div class="about-container">
-       <h1 id="about">About us</h1>
-        
-        <div class="dev-container">
-            <h3>Tamir Kitay</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-3-sm.jpg"/> <!--developer image-->
-        </div>
+    <div id="about" class="about-section">
+        <div class="container-wrap">
+            <h1>About us</h1>
+                
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
-        <div class="dev-container">
-             <h3>Meir</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-2-sm.jpg"/> <!--developer image-->
-        </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
-        <div class="dev-container">
-             <h3>Moshe Mantsur</h3>
-            <h4>developer description</h4>
-            <img src="assets/img/sm/img-1-sm.png"/> <!--developer image-->
-        </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>Moshe Mantsur</h2>
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                        </p>
+                    </div>
+                    
+                    <img src="assets/img/sm/img-3-sm.jpg"/>
+                </div>
 
+        </div>
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> 2b384d108882731f8a862bcb1076f3e0507a3668
 
 <!-------------------------- CONTACT -------------------------->
 
-    <div class="contact-section">
+    <div id="contact" class="contact-section container-wrap">
 
-        <h1 id="contact">Contact us</h1>
+        <h1 >Contact us</h1>
 
         <div class="form-contact">
             <form action="action.php" class="">
@@ -193,9 +218,13 @@
         <p>&copy; All right reversed!</p>
     </footer>
 
+<<<<<<< HEAD
     <!--<script src="src/js/imgs.js"></script>-->
     <script src="./src/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/ba14a1b9f1.js"></script>
+=======
+    <script src="src/js/imgs.js"></script>
+>>>>>>> d8a9cf5fb26dfde56b6db862555c41a8ac764d83
     <script src="src/js/render.js"></script>
     <script src="src/js/main.js"></script>
 </body>

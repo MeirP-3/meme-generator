@@ -25,19 +25,43 @@ function createTagCloud() {
 
 }
 
-function filter() {
+function filter(searchKeys) { // if search-icon is toggled and the input is not empty, click on the search icon activate the filter function
+    var searchBox = document.querySelector('#search-box');
 
+    var filtered = gImgs.filter(function (img) {
+        for (var i = 0; i < img.keywords.length; i++) {
+            for (var j = 0; j < searchKeys.length; j++) {
+                if (img.keywords[i] === searchKeys[j]) {
+                    return true;
+                }
+            }
+        }
+    });
+    console.log(filtered);
 }
 
 function showSearchBox() {
     var box = document.querySelector('.search-container input');
     if (box.classList.contains('hidden')) {
         box.classList.remove('hidden');
+    }
+}
+
+function toggleSearchBox() {
+    var elSearchBox = document.querySelector('.search-container');
+    var elNavBar = document.querySelector('.navigation');
+    if (elSearchBox.classList.contains('hidden')) {
+        elSearchBox.classList.remove('hidden');
+        elNavBar.classList.add('hidden');
+
     } else {
-        box.classList.add('hidden');
+        elSearchBox.classList.add('hidden');
+        elNavBar.classList.remove('hidden');
     }
 
 }
+
+
 // update top text in model on any change
 $('.top textarea').keyup(function () {
     var content = $(this).val();
@@ -120,13 +144,13 @@ $('.bottom [data-decrease]').click(function () {
 });
 
 /////////////////////////////////////// clear textarea ///////////////////////////////////////////////
-$('.top [data-clear]').click(function() {
+$('.top [data-clear]').click(function () {
     $('.top textarea')[0].value = '';
     gState.txts[0].content = '';
     drawCanvas();
 });
 
-$('.bottom [data-clear]').click(function() {
+$('.bottom [data-clear]').click(function () {
     $('.bottom textarea')[0].value = '';
     gState.txts[1].content = '';
     drawCanvas();
