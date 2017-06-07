@@ -1,5 +1,4 @@
 
-
 var gImgs = [
     {
         id: 1,
@@ -114,3 +113,15 @@ var gImgs = [
         ]
     }
 ]
+
+var gImgsMap = {
+    1: gImgs[0],
+    2: gImgs[1],
+    3: gImgs[2],
+    4: gImgs[3],
+    5: gImgs[4],
+    6: gImgs[5],
+    7: gImgs[6],
+    8: gImgs[7],
+    9: gImgs[8]
+}
