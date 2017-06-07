@@ -2,21 +2,22 @@
 * {
   box-sizing: border-box; }
 
-* {
-  border: 1px solid #f4f3f3; }
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   color: white;
   background: #550000;
   margin: 0; }
 
 main {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: stretch; }
+  @media screen and (min-width: 400px) {
+    main {
+      align-items: center; } }
 
 .hover:hover {
   cursor: pointer; }
@@ -189,9 +190,13 @@ header .nav-container {
   .about-section .card {
     padding: 2em 0;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    @media screen and (min-width: 400px) {
+      .about-section .card {
+        flex-direction: row-reverse;
+        justify-content: flex-end; } }
   .about-section h1 {
     text-align: center; }
 
@@ -199,11 +204,18 @@ header .nav-container {
   padding: 1em 2em; }
 
 .card img {
-  border: 2px solid white; }
+  border: 2px solid white;
+  align-self: center;
+  width: auto;
+  height: auto; }
 
 .card:nth-child(odd) {
-  flex-direction: row;
-  justify-content: flex-start; }
+  flex-direction: column-reverse;
+  justify-content: flex-end; }
+  @media screen and (min-width: 400px) {
+    .card:nth-child(odd) {
+      flex-direction: row;
+      justify-content: flex-start; } }
 
 .contact-section {
   width: 100%;

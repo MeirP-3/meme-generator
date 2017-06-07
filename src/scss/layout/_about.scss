@@ -11,9 +11,14 @@
     .card {
         padding: 2em 0;
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
         border-bottom: 1px solid rgba(255,255,255,0.2);
+
+        @media screen and (min-width: $xs) {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
 
     }
 
@@ -31,10 +36,19 @@
     
         // border-radius: 50%;
         border: 2px solid white;
+        align-self: center;
+        width: auto;
+        height: auto;
     }
 }
 
 .card:nth-child(odd) {
-    flex-direction: row ;
-    justify-content: flex-start;
+    flex-direction: column-reverse ;
+    justify-content: flex-end;
+    
+    @media screen and (min-width: $xs) {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
 }
