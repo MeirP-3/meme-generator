@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Meme generator</title>
     <link rel="stylesheet" href="src/lib/fa/css/fa.min.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="./src/lib/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="./src/lib/bootstrap/css/bootstrap.min.css">-->
     
 </head>
 <body>
     
     <header class="">
-
-        <div class="menu container-wrap">
+        <div class="header-container container-wrap">
             <i class="icon fa fa-bars glyphicon glyphicon-search" aria-hidden="true"></i>
-            <div class="navigation">
-                <ul class="nav-items nav-setup">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-       
-                </ul>
-            </div>
-        </div>
 
-        <div class="title hidden">
-            <h2>Meme creator</h2>
-        </div>
-<<<<<<< HEAD
-        <div class="search-container">
-            <input type="search" placeholder="Search Meme" id= "search-box" class="hidden">
-=======
-        <div class="search-container" class="hidden">
-            <input type="search" placeholder="Search Meme" >
->>>>>>> 2b384d108882731f8a862bcb1076f3e0507a3668
+            <div class="menu container-wrap">
+                
+                <div class="navigation">
+                    <ul class="nav-items nav-setup">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+        
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="search-container">
+                <div class="title">
+                    <h2>Meme creator</h2>
+                    <h5>choose your category</h5>
+                </div>
+                <div>
+                <input type="search" placeholder="Search Meme" class="hidden">
+                </div>
+            <div class="search-icon" onclick="toggleHeaderElements()">
+                <i class="icon fa fa-search" aria-hidden="true"></i>
+            </div>
         </div>
         <div class="search-icon" onclick="toggleSearchBox()">
             <i class="icon fa fa-search" aria-hidden="true"></i>
         </div>
-    </header>
+
+    </header> 
 
     <main>
 
@@ -191,10 +196,7 @@
                 </div>
 
         </div>
-<<<<<<< HEAD
     </div>
-=======
->>>>>>> 2b384d108882731f8a862bcb1076f3e0507a3668
 
 <!-------------------------- CONTACT -------------------------->
 
@@ -218,13 +220,9 @@
         <p>&copy; All right reversed!</p>
     </footer>
 
-<<<<<<< HEAD
     <!--<script src="src/js/imgs.js"></script>-->
     <script src="./src/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/ba14a1b9f1.js"></script>
-=======
-    <script src="src/js/imgs.js"></script>
->>>>>>> d8a9cf5fb26dfde56b6db862555c41a8ac764d83
     <script src="src/js/render.js"></script>
     <script src="src/js/main.js"></script>
 </body>
