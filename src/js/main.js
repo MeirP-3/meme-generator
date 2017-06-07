@@ -28,43 +28,43 @@ function createTagCloud() {
 
 }
 
-// function filter(searchKeys) { // if search-icon is toggled and the input is not empty, click on the search icon activate the filter function
-//     var searchBox = document.querySelector('#search-box');
+function filter(searchKeys) { // if search-icon is toggled and the input is not empty, click on the search icon activate the filter function
+    var searchBox = document.querySelector('#search-box');
 
-//     var filtered = gImgs.filter(function (img) {
-//         for (var i = 0; i < img.keywords.length; i++) {
-//             for (var j = 0; j < searchKeys.length; j++) {
-//                 if (img.keywords[i] === searchKeys[j]) {
-//                     return true;
-//                 }
-//             }
-//         }
-//     });
-//     console.log(filtered);
-// }
+    var filtered = gImgs.filter(function (img) {
+        for (var i = 0; i < img.keywords.length; i++) {
+            for (var j = 0; j < searchKeys.length; j++) {
+                if (img.keywords[i] === searchKeys[j]) {
+                    return true;
+                }
+            }
+        }
+    });
+    console.log(filtered);
+}
 
-// function showSearchBox() {
-//     var box = document.querySelector('.search-container input');
-//     if (box.classList.contains('hidden')) {
-//         box.classList.remove('hidden');
-//     }
-// }
+function showSearchBox() {
+    var box = document.querySelector('.search-container input');
+    if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+    }
+}
 
-// function toggleHeaderElements() {
-//     var elSearchBox = document.querySelector('.search-container');
-//     var elNavBar = document.querySelector('.navigation');
-//     var elTitle = document.querySelector('header .title');
+function toggleHeaderElements() {
+    var elSearchBox = document.querySelector('.search-container');
+    var elNavBar = document.querySelector('.navigation');
+    var elTitle = document.querySelector('header .title');
 
-//     if (elSearchBox.classList.contains('hidden')) {
-//         elSearchBox.classList.remove('hidden');
-//         elNavBar.classList.add('hidden');
+    if (elSearchBox.classList.contains('hidden')) {
+        elSearchBox.classList.remove('hidden');
+        elNavBar.classList.add('hidden');
 
-//     } else {
-//         elSearchBox.classList.add('hidden');
-//         elNavBar.classList.remove('hidden');
-//     }
+    } else {
+        elSearchBox.classList.add('hidden');
+        elNavBar.classList.remove('hidden');
+    }
 
-// }
+}
 
 // update top text in model on any change
 $('.top textarea').keyup(function () {
@@ -161,11 +161,6 @@ $('.bottom [data-clear]').click(function () {
     drawCanvas();
 });
 
-$('.item-container').click(function () {
-    var id = this.id;
-    localStorage.setItem('id', id)
-});
-
 ////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
@@ -195,6 +190,7 @@ function init() {
     $('.item-container').click(function () {
         var id = this.id;
         localStorage.setItem('id', id)
+        window.location = EDITOR_LINK;
     });
 }
 
@@ -209,13 +205,8 @@ function renderItems() {
 function renderItem(url, i) {
     var item = $('.item-container').clone()[0];
     $(item).find('.item-img img').attr('src', url);
-    $(item).find('.editor-link').attr('href', EDITOR_LINK);
     item.id = `img-${i + 1}`;
     $('.items-wraper').append(item);
-}
-
-function renderImgs() {
-
 }
 
 function renderTagCloud() {
