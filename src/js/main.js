@@ -11,7 +11,7 @@ function filter() {
 }
 
 function showSearchBox() {
-    var box = document.querySelector('.search-container');
+    var box = document.querySelector('.search-container input');
     if (box.classList.contains('hidden')) {
         box.classList.remove('hidden'); 
     } else {

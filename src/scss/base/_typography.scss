@@ -1,17 +1,10 @@
 
-/*----------  Playfair Font  ----------*/
+/*----------  Source Sans Pro  ----------*/
 
 @font-face {
-  font-family: 'Playfair';
-  src: url('../assets/fonts/playfair/PlayfairDisplay-Regular.ttf'); 
-}
-
-
-/*----------  Ubunto Font  ----------*/
-
-@font-face {
-  font-family: 'Ubunto';
-  src: url('../assets/fonts/ubunto/Ubuntu-Light.ttf');
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/SourceSansPro/SourceSansPro-Black.ttf');
   font-weight: 400;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');

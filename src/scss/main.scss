@@ -1,16 +1,17 @@
-@import 'helpers/variables';  
+@import 'helpers/variables';
 
 // === base ===
 
-@import 'base/base.scss'; 
+@import 'base/base.scss';
 @import 'base/typography';
- 
-// == components ===
+
+//== components ===
 
 @import 'components/buttons';
 @import 'components/dropdown';
 @import 'components/navigation';
 @import 'components/items';
+@import 'components/inputs';
 
 // == helpers ===
 
@@ -20,13 +21,16 @@
 
 
 // == layout ===
-    
+
 @import 'layout/grid';
 @import 'layout/footer';
 @import 'layout/forms';
 @import 'layout/header';
 @import 'layout/sidebar';
+@import 'layout/about';
+@import 'layout/main';
+@import 'layout/contact';
 
-// === vendors ===
+//=== vendors ===
 
 @import 'vendors/bootstrap';

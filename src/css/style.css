@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 * {
   box-sizing: border-box; }
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -17,44 +19,103 @@ main {
   cursor: pointer; }
 
 .hidden {
-  visibility: hidden; }
+  display: none; }
 
 .visible {
   visibility: visible; }
 
-/*----------  Playfair Font  ----------*/
-@font-face {
-  font-family: 'Playfair';
-  src: url("../assets/fonts/playfair/PlayfairDisplay-Regular.ttf"); }
+a {
+  text-decoration: none;
+  color: white; }
+  a:active {
+    color: white; }
 
-/*----------  Ubunto Font  ----------*/
+/*----------  Source Sans Pro  ----------*/
 @font-face {
-  font-family: 'Ubunto';
-  src: url("../assets/fonts/ubunto/Ubuntu-Light.ttf");
+  font-family: 'Source Sans Pro';
+  src: url("assets/fonts/SourceSansPro/SourceSansPro-Black.ttf");
   font-weight: 400; }
 
+.navigation {
+  display: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px; }
+  @media screen and (min-width: 400px) {
+    .navigation {
+      display: initial; } }
+
+.navigation a:link {
+  color: white;
+  transition: all, 1s; }
+
+.navigation a:hover {
+  border-top: 1px solid rgba(225, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(225, 255, 255, 0.6); }
+
+@media screen and (min-width: 400px) {
+  div.item-container {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around; } }
+
 .item-container {
-  height: 80px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.6); }
   .item-container div {
     display: flex;
     align-items: center; }
+
+.item-container div:nth-last-of-type(1) {
+  order: 3; }
 
 .item-title {
   display: flex;
   justify-content: flex-start;
   align-items: center; }
 
-.item-img img {
-  width: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border: 1px solid rgba(255, 255, 255, 0.6); }
+.item-container {
+  padding: 5px 10px;
+  flex-grow: 1; }
+  .item-container:hover {
+    opacity: 0.5;
+    border: 1px solid white; }
+  .item-container .item-img {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    max-height: 100%; }
+    @media screen and (min-width: 400px) {
+      .item-container .item-img {
+        width: 150px;
+        height: 150px; } }
+    .item-container .item-img img {
+      max-width: 100%;
+      max-height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.6); }
+
+@media screen and (min-width: 400px) {
+  .content .items-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5% 3%; } }
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6); }
+
+.search-container input {
+  width: 100%;
+  height: 2.3em;
+  background: #D46A6A;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 5%; }
 
 .clean-list {
-  list-style: none; }
+  list-style-type: none; }
 
 .img-responsive {
   max-width: 100%;
@@ -62,7 +123,17 @@ main {
   display: block;
   width: 100%; }
 
+.nav-setup {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nav-setup li {
+    margin: 5px 10px; }
+
 footer {
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -71,27 +142,76 @@ footer {
   background: #801515; }
 
 header {
+  padding: 1% 4%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 60px;
-  background: #801515; }
+  background: #801515;
+  background: linear-gradient(to bottom, #a82b46 2%, #8f0222 56%, #801515 100%); }
   header div {
     display: flex;
     justify-content: center;
     align-items: center; }
 
-@media screen and (max-width: 480px) {
-  header h1 {
-    display: none; } }
-
 header .icon {
   font-size: 2.1em;
   cursor: pointer; }
 
-.search-container input::placeholder {
-  color: rgba(255, 255, 255, 0.6); }
+.about-container {
+  padding-top: 20px;
+  padding-bottom: 100px;
+  display: flex-column;
+  background: #801515; }
+  .about-container .dev-container {
+    display: flex-column;
+    margin-top: 50px; }
+    .about-container .dev-container h3 {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 2em; }
+    .about-container .dev-container h4 {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 2em; }
+    .about-container .dev-container img {
+      display: flex;
+      margin: auto; }
 
-.search-container input {
-  background: #D46A6A;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white; }
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 0; }
+
+.contact-section .form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+  .contact-section .form-contact form {
+    display: flex;
+    flex-direction: column; }
+    .contact-section .form-contact form input, .contact-section .form-contact form textarea {
+      margin: 20px 0;
+      min-height: 50px;
+      background: #550000;
+      border: 1px solid rgba(255, 255, 255, 0.9); }
+      .contact-section .form-contact form input::placeholder, .contact-section .form-contact form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .contact-section .form-contact form input:hover, .contact-section .form-contact form textarea:hover {
+        border: 1px solid white; }
+      .contact-section .form-contact form input:focus, .contact-section .form-contact form textarea:focus {
+        border: 1px solid #550000;
+        background: #801515; }
+    .contact-section .form-contact form input[type=submit] {
+      width: 50%;
+      background-color: #801515;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer; }
+      .contact-section .form-contact form input[type=submit]:active {
+        background: lightcoral; }
+      .contact-section .form-contact form input[type=submit]:hover {
+        border: 1px solid white; }

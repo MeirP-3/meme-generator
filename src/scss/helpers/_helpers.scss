@@ -1,5 +1,5 @@
 .clean-list {
-  list-style: none;
+  list-style-type: none;
 }
 
 .img-responsive {
@@ -7,4 +7,15 @@
   height: auto;
   display: block;
   width: 100%;
+}
+
+.nav-setup {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & li {
+    margin: 5px 10px;
+  }
 }

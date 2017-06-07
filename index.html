@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Meme generator</title>
+    <link rel="stylesheet" src="src/lib/fa/css/fa.min.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <script src="./src/lib/bootstrap/css/bootstrap.min.css"></script>
+    <script src="./src/lib/bootstrap/js/bootstrap.min.js"></script>
+
     <script src="https://use.fontawesome.com/ba14a1b9f1.js"></script>
 </head>
 <body>
-    <header>
-        
+    
+
+    </div>
+    <header class="col-lg-2">
+
         <div class="menu">
-            <i class="icon fa fa-bars" aria-hidden="true"></i>
-        </div> 
-        <div class="title visible">
+            <i class="icon fa fa-bars glyphicon glyphicon-search" aria-hidden="true"></i>
+            <div class="navigation">
+                <ul class="nav-items nav-setup">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+       
+                </ul>
+            </div>
+        </div>
+
+        <div class="title hidden">
             <h2>Meme creator</h2>
-        </div> 
-        <div class="search-container hidden">
-            <input type="search" placeholder="Search Meme">
+        </div>
+        <div class="search-container">
+            <input type="search" placeholder="Search Meme" class="hidden">
         </div>
         <div class="search-icon" onclick="showSearchBox()">
             <i class="icon fa fa-search" aria-hidden="true"></i>
@@ -25,9 +41,11 @@
     </header>
 
     <main>
-    
+
         <div class="content">
+            <div class="items-wraper">
             <div class="item-container">
+                <a href="#">
                 <div class="item-img">
                     <img src="assets/img/sm/img-1-sm.png" />
                 </div>
@@ -37,6 +55,7 @@
                 <div class="item-star">
                     <i class="star fa fa-star" aria-hidden="true"></i>
                 </div>
+                </a>
             </div>
             <div class="item-container">
                 <div class="item-img">
@@ -44,7 +63,7 @@
                 </div>
                 <div class="item-title">
                     <h3>Item title</h3>
-                </div>  
+                </div>
                 <div class="item-star">
                     <i class="star fa fa-star" aria-hidden="true"></i>
                 </div>
@@ -126,9 +145,50 @@
                     <i class="star fa fa-star" aria-hidden="true"></i>
                 </div>
             </div>
-
-
+            </div>
         </div>
+
+<!--------------------------ABOUT-------------------------->
+
+    <div class="about-container">
+       <h1 id="about">About us</h1>
+        
+        <div class="dev-container">
+            <h3>Tamir Kitay</h3>
+            <h4>developer description</h4>
+            <img src="assets/img/sm/img-3-sm.jpg"/> <!--developer image-->
+        </div>
+
+        <div class="dev-container">
+             <h3>Meir</h3>
+            <h4>developer description</h4>
+            <img src="assets/img/sm/img-2-sm.jpg"/> <!--developer image-->
+        </div>
+
+        <div class="dev-container">
+             <h3>Moshe Mantsur</h3>
+            <h4>developer description</h4>
+            <img src="assets/img/sm/img-1-sm.png"/> <!--developer image-->
+        </div>
+
+    </div>
+
+<!-------------------------- CONTACT -------------------------->
+
+    <div class="contact-section">
+
+        <h1 id="contact">Contact us</h1>
+
+        <div class="form-contact">
+            <form action="action.php" class="">
+                <input type="text" placeholder="name (required)"> 
+                <input type="email" placeholder="e-Mail (required)"> 
+                <input type="text" placeholder="Subject"> 
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your msg here"></textarea>
+                <input type="submit" placeholder="Subject"> 
+            </form>
+        </div>
+    </div>
     </main>
 
     <footer>

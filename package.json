@@ -6,13 +6,12 @@
   "scripts": {
     "start": "npm-run-all --parallel server styles",
     "server": "live-server",
-    "styles": "node-sass -w src/scss/main.scss src/css/style.css"
+    "styles": "node-sass src/scss/main.scss src/css/style.css"
   },
-  
+
   "author": "tamiross",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2"

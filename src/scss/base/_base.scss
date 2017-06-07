@@ -5,12 +5,14 @@
 
 // * {
 //     border: 1px solid #f4f3f3;
-// }
+// }  
 
 // Basic HTML elements
 
 
 body {
+
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -31,9 +33,22 @@ main {
 
 
 .hidden {
- visibility: hidden;
+ display:none;
 }
  
 .visible {
   visibility: visible;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    
+  }
+
+  &:active {
+    color: white;
+  }
 }
