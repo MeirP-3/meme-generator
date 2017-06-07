@@ -29,9 +29,11 @@ function filter() {
 
 }
 
-function toggleSearchBox() {
+function toggleHeaderElements() {
     var elSearchBox = document.querySelector('.search-container');
     var elNavBar = document.querySelector('.navigation');
+    var elTitle = document.querySelector('header .title');
+        
     if (elSearchBox.classList.contains('hidden')) {
         elSearchBox.classList.remove('hidden');
         elNavBar.classList.add('hidden');

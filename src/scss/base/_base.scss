@@ -15,7 +15,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   color: white;
   background: #550000;
   margin: 0;
@@ -24,6 +24,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  // align-items: center;
 }
 
 

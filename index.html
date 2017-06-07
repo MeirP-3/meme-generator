@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Meme generator</title>
@@ -13,30 +13,37 @@
 <body>
     
     <header class="">
-
-        <div class="menu container-wrap">
+        <div class="header-container container-wrap">
             <i class="icon fa fa-bars glyphicon glyphicon-search" aria-hidden="true"></i>
-            <div class="navigation">
-                <ul class="nav-items nav-setup">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-       
-                </ul>
+
+            <div class="menu container-wrap">
+                
+                <div class="navigation">
+                    <ul class="nav-items nav-setup">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+        
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="search-container">
+                <div class="title">
+                    <h2>Meme creator</h2>
+                    <h5>choose your category</h5>
+                </div>
+                <div>
+                <input type="search" placeholder="Search Meme" class="hidden">
+                </div>
+            <div class="search-icon" onclick="toggleHeaderElements()">
+                <i class="icon fa fa-search" aria-hidden="true"></i>
             </div>
         </div>
 
-        <div class="title hidden">
-            <h2>Meme creator</h2>
-        </div>
-        <div class="search-container" class="hidden">
-            <input type="search" placeholder="Search Meme" >
-        </div>
-        <div class="search-icon" onclick="toggleSearchBox()">
-            <i class="icon fa fa-search" aria-hidden="true"></i>
-        </div>
-    </header>
+    </header> 
 
     <main>
 
