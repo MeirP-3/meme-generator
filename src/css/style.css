@@ -207,7 +207,6 @@ header .icon {
   padding: 1em 2em; }
 
 .card img {
-  border-radius: 50%;
   border: 2px solid white; }
 
 .card:nth-child(odd) {

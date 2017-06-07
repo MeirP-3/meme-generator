@@ -1,6 +1,9 @@
 'use strict'
 
 // the first element in txts is the top text, the last is the bottom text
+
+var EDITOR_LINK = 'app.html';
+
 var gState = {
     selectedImgId: 0,
     txts: [
@@ -51,7 +54,7 @@ function toggleHeaderElements() {
     var elSearchBox = document.querySelector('.search-container');
     var elNavBar = document.querySelector('.navigation');
     var elTitle = document.querySelector('header .title');
-        
+
     if (elSearchBox.classList.contains('hidden')) {
         elSearchBox.classList.remove('hidden');
         elNavBar.classList.add('hidden');
@@ -62,7 +65,6 @@ function toggleHeaderElements() {
     }
 
 }
-
 
 // update top text in model on any change
 $('.top textarea').keyup(function () {
@@ -145,7 +147,8 @@ $('.bottom [data-decrease]').click(function () {
     drawCanvas();
 });
 
-/////////////////////////////////////// clear textarea ///////////////////////////////////////////////
+/////////////////////////////////////// clear textarea ///////////////////////////
+
 $('.top [data-clear]').click(function () {
     $('.top textarea')[0].value = '';
     gState.txts[0].content = '';
@@ -156,4 +159,10 @@ $('.bottom [data-clear]').click(function () {
     $('.bottom textarea')[0].value = '';
     gState.txts[1].content = '';
     drawCanvas();
+});
+
+$('.item-container').click(function() {
+    var id = $(this).attr('id');
+    console.log(id);
+    // gState.selectedImgId = 
 });

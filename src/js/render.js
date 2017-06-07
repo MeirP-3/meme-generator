@@ -2,6 +2,25 @@
 
 var MAX_WIDTH = 300;
 
+$(document).ready(renderItems);
+
+function renderItems() {
+    for (var i = 0; i < gImgs.length; i++) {
+        // debugger;
+        var url = gImgs[i].url.sm;
+        renderItem(url, i);
+    }
+    $('.item-container')[0].classList.add('hidden');
+}
+
+function renderItem(url, i) {
+    var item = $('.item-container').clone()[0];
+    $(item).find('.item-img img').attr('src', url);
+    $(item).find('.editor-link').attr('href', EDITOR_LINK);
+    item.setAttribute('id', `item-${i}`);
+    $('.items-wraper').append(item);
+}
+
 function renderImgs() {
 
 }
