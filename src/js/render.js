@@ -47,6 +47,7 @@ function drawCanvas() {
         var aspectRatio = img.width / img.height;
         var height = width / aspectRatio;
         var canvas = $('canvas')[0];
+
 //************************************************************************************
 // there is a significant difference between <canvas.width> to <canvas.style.width>.
 // the former defines the width in pixels of the canvas,
@@ -54,6 +55,7 @@ function drawCanvas() {
 // I figured it out beacuse the img was drawn partialy on the canbas no matter how 
 // the width style was.
 //************************************************************************************
+
         canvas.width = width;
         canvas.height = height;
         context.drawImage(img, 0, 0, width, height);
