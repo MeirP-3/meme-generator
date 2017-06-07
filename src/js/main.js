@@ -25,9 +25,22 @@ function createTagCloud() {
 
 }
 
-function filter() {
+function filter(searchKeys) { // if search-icon is toggled and the input is not empty, click on the search icon activate the filter function
+    var searchBox = document.querySelector('#search-box');
 
+    var filtered = gImgs.filter(function (img) {
+        for (var i = 0; i < img.keywords.length; i++) {
+            for (var j = 0; j < searchKeys.length; j++) {
+                if (img.keywords[i] === searchKeys[j]) {
+                    return true;
+                }
+            }
+        }
+    });
+    console.log(filtered);
 }
+
+
 
 function toggleSearchBox() {
     var elSearchBox = document.querySelector('.search-container input');
@@ -40,8 +53,8 @@ function toggleSearchBox() {
         elSearchBox.classList.add('hidden');
         elNavBar.classList.remove('hidden');
     }
-    
-}   
+
+}
 
 
 // update top text in model on any change
@@ -61,34 +74,34 @@ $('.bottom textarea').keyup(function () {
 // update color
 
 //top
-$('.top .color').click(function() {
+$('.top .color').click(function () {
     var colorInput = $('.top [type = color]')[0];
     colorInput.click();
 });
 
-$('.top [type = color]').change(function() {
+$('.top [type = color]').change(function () {
     gState.txts[0].color = $(this).val();
     drawCanvas();
 });
 
 //bottom
-$('.bottom .color').click(function() {
+$('.bottom .color').click(function () {
     var colorInput = $('.bottom [type = color]')[0];
     colorInput.click();
 });
 
-$('.bottom [type = color]').change(function() {
+$('.bottom [type = color]').change(function () {
     gState.txts[1].color = $(this).val();
     drawCanvas();
 });
 
 // update text-align
-$('.top [data-align]').click(function() {
+$('.top [data-align]').click(function () {
     gState.txts[0].align = $(this).attr('data-align');
     drawCanvas();
 });
 
-$('.bottom [data-align]').click(function() {
+$('.bottom [data-align]').click(function () {
     gState.txts[1].align = $(this).attr('data-align');
     drawCanvas();
 });
