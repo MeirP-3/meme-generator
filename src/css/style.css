@@ -30,7 +30,7 @@ a {
 /*----------  Source Sans Pro  ----------*/
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url("assets/fonts/SourceSansPro/SourceSansPro-Black.ttf");
+  src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Black.ttf");
   font-weight: 400; }
 
 .navigation {
