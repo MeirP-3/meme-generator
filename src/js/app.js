@@ -4,9 +4,13 @@ var MAX_WIDTH = 1000;
 var DEFAULT_FONT_SIZE = '60px';
 var TOP_COLOR = 'yellow';
 var BOTTOM_COLOR = "yellow";
+var NONE = 'none';
+var TOP = 'top';
+var BOTTOM = 'botom';
 
 var gState = {
     selectedImgId: `img-${getRandomIntInclusive(1, 9)}`,
+    alignBarFor: 'none',
     txts: [
         {
             content: '',
@@ -26,7 +30,7 @@ var gState = {
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////
-//                                  help function: in case of
+//                                  help function : in case of
 ///////////////////////////////////////////////////////////////////////////////////////
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -51,7 +55,7 @@ function init() {
         var imgUrl = gImgsMap[id].url.lg;
         img.src = imgUrl;
 
-        $(img).on('load', function () {
+        $(img).on('load', function() {
 
             // TODO: add only changed element
 
@@ -75,12 +79,12 @@ function init() {
             // handle proper aspect ratio
             $(canvas).height($(canvas).width() / aspectRatio);
 
-            $(window).resize(function () {
+            $(window).resize(function() {
                 $(canvas).height($(canvas).width() / aspectRatio);
             });
-            
+
             // add all texts
-            gState.txts.forEach(function (txt, i) {
+            gState.txts.forEach(function(txt, i) {
                 var objTxt = gState.txts[i];
                 var fontSize = parseInt(objTxt.fontSize);
 
@@ -122,14 +126,14 @@ function init() {
 
 
     // update top text in model on any change
-    $('.top textarea').keyup(function () {
+    $('.top textarea').keyup(function() {
         var content = $(this).val();
         gState.txts[0].content = content;
         drawCanvas();
     });
 
     // update bottom text in model on any change
-    $('.bottom textarea').keyup(function () {
+    $('.bottom textarea').keyup(function() {
         var content = $(this).val();
         gState.txts[1].content = content;
         drawCanvas();
@@ -138,34 +142,34 @@ function init() {
     ///////////////////////////////// update color ///////////////////////////////////////////
 
     //top
-    $('.top .color').click(function () {
+    $('.top .color').click(function() {
         var colorInput = $('.top [type = color]')[0];
         colorInput.click();
     });
 
-    $('.top [type = color]').change(function () {
+    $('.top [type = color]').change(function() {
         gState.txts[0].color = $(this).val();
         drawCanvas();
     });
 
     //bottom
-    $('.bottom .color').click(function () {
+    $('.bottom .color').click(function() {
         var colorInput = $('.bottom [type = color]')[0];
         colorInput.click();
     });
 
-    $('.bottom [type = color]').change(function () {
+    $('.bottom [type = color]').change(function() {
         gState.txts[1].color = $(this).val();
         drawCanvas();
     });
 
     /////////////////////////////////////// handle show-hide edit tools ///////////////////////////////////////////
-    $(document).click(function () {
+    $(document).click(function() {
         $('.main').addClass('offset');
         $('.align').addClass('offset');
     });
 
-    $('.btn-toolbar').click(function (e) {
+    $('.btn-toolbar').click(function(e) {
         e.stopPropagation();
     });
 
@@ -192,28 +196,37 @@ function init() {
 
     /////////////////////////////////////// handle show-hide text align bar ///////////////////////////////////////////
 
-    // $('.top .more').click(function (e) {
-    //     $('.align').toggleClass('top');
-    //     $('.align').toggleClass('bottom');
-    //     $('.top.align').toggleClass('offset');
-    //     e.stopPropagation();
-    // })
-
-    // $('.bottom .more').click(function (e) {
-    //     $('.align').toggleClass('top');
-    //     $('.align').toggleClass('bottom');
-    //     $('.bottom.align').toggleClass('offset');
-    //     e.stopPropagation();
-    // })
-
-    /////////////////////////////////////// update text-align /////////////////////////////////////////////
-    $('.top [data-align]').click(function () {
-        gState.txts[0].align = $(this).attr('data-align');
-        drawCanvas();
+    $('.top .more').click(function(e) {
+        var $alignBar = $('.align');
+        if (gState.alignBarFor === NONE) {
+            gState.alignBarFor = TOP;
+            $alignBar.removeClass('offset');
+        } else if (gState.alignBarFor === TOP) {
+            gState.alignBarFor = NONE;
+            $alignBar.addClass('offset');
+        } else if (gState.alignBarFor === BOTTOM) {
+            gState.alignBarFor === TOP;
+        }
+        e.stopPropagation();
     });
 
-    $('.bottom [data-align]').click(function () {
-        gState.txts[1].align = $(this).attr('data-align');
+    $('.bottom .more').click(function(e) {
+        var $alignBar = $('.align');
+        if (gState.alignBarFor === NONE) {
+            gState.alignBarFor = BOTTOM;
+            $alignBar.removeClass('offset');
+        } else if (gState.alignBarFor === BOTTOM) {
+            gState.alignBarFor = NONE;
+            $alignBar.addClass('offset');
+        } else if (gState.alignBarFor === TOP) {
+            gState.alignBarFor === BOTTOM;
+        }
+        e.stopPropagation();
+    });
+
+    /////////////////////////////////////// update text-align /////////////////////////////////////////////
+    $('[data-align]').click(function() {
+        gState.txts[0].align = $(this).attr('data-align');
         drawCanvas();
     });
 
@@ -221,28 +234,28 @@ function init() {
 
     // TODO: handle max & min
 
-    $('.top [data-increase]').click(function () {
+    $('.top [data-increase]').click(function() {
         var currentSize = parseInt(gState.txts[0].fontSize);
         var updatedSize = currentSize + 2;
         gState.txts[0].fontSize = updatedSize + 'px';
         drawCanvas();
     });
 
-    $('.top [data-decrease]').click(function () {
+    $('.top [data-decrease]').click(function() {
         var currentSize = parseInt(gState.txts[0].fontSize);
         var updatedSize = currentSize - 2;
         gState.txts[0].fontSize = updatedSize + 'px';
         drawCanvas();
     });
 
-    $('.bottom [data-increase]').click(function () {
+    $('.bottom [data-increase]').click(function() {
         var currentSize = parseInt(gState.txts[1].fontSize);
         var updatedSize = currentSize + 2;
         gState.txts[1].fontSize = updatedSize + 'px';
         drawCanvas();
     });
 
-    $('.bottom [data-decrease]').click(function () {
+    $('.bottom [data-decrease]').click(function() {
         var currentSize = parseInt(gState.txts[1].fontSize);
         var updatedSize = currentSize - 2;
         gState.txts[1].fontSize = updatedSize + 'px';
@@ -251,13 +264,13 @@ function init() {
 
     /////////////////////////////////////// clear textarea ///////////////////////////
 
-    $('.top [data-clear]').click(function () {
+    $('.top [data-clear]').click(function() {
         $('.top textarea')[0].value = '';
         gState.txts[0].content = '';
         drawCanvas();
     });
 
-    $('.bottom [data-clear]').click(function () {
+    $('.bottom [data-clear]').click(function() {
         $('.bottom textarea')[0].value = '';
         gState.txts[1].content = '';
         drawCanvas();
@@ -266,7 +279,7 @@ function init() {
     ////////////////////////////////////////////////////////////////////////////////////////
     //                                  export image
     ////////////////////////////////////////////////////////////////////////////////////////
-    $('.create-img').click(function () {
+    $('.create-img').click(function() {
         var canvas = $('canvas')[0];
         window.location = canvas.toDataURL('image/jpg');
     });
