@@ -65,14 +65,13 @@ button {
     display: none; }
     @media screen and (min-width: 450px) {
       .flexy-nav__items span {
-        display: initial; } }
+        display: none; } }
 
 .flexy-nav__items--visible {
   display: flex; }
 
 .flexy-nav__item {
-  background-color: linear-gradient(to bottom, #a82b46 2%, #8f0222 56%, #801515 100%);
-  border-bottom: solid 1px #e7e7e7; }
+  background-color: linear-gradient(to bottom, #a82b46 2%, #8f0222 56%, #801515 100%); }
 
 .flexy-nav__item:last-child {
   border-bottom: 0; }
