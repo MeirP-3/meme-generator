@@ -58,6 +58,7 @@ a {
     justify-content: space-around; } }
 
 .item-container {
+  cursor: pointer;
   display: flex;
   justify-content: space-around;
   align-items: center;
