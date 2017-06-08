@@ -16,8 +16,10 @@
         border-bottom: 1px solid rgba(255,255,255,0.2);
 
         @media screen and (min-width: $xs) {
+            padding: 2em;
             flex-direction: row-reverse;
             justify-content: flex-end;
+            
         }
 
     }
@@ -31,15 +33,17 @@
     .info {
         padding: 1em 2em;
     }
-
     & img {
-    
+        
         // border-radius: 50%;
         border: 2px solid white;
+        border-radius: 4%;
         align-self: center;
         width: auto;
+        max-width: 280px;
         height: auto;
     }
+
 }
 
 .card:nth-child(odd) {
