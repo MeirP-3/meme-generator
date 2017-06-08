@@ -6,67 +6,52 @@
     <title>Meme generator</title>
     <link rel="stylesheet" href="src/lib/fa/css/fa.min.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="./src/lib/bootstrap/css/bootstrap.min.css">-->
 
 </head>
 
 <body>
-
-    <header class="">
-        <div class="header-container container-wrap">
-            <i class="icon " aria-hidden="true"></i>
-
-            <div class="menu container-wrap">
-
-                <div class="navigation">
-                    <ul class="nav-items nav-setup">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-
-                    </ul>
-                </div>
+     <!--<header>-->
+            <!--<div class="nav-container container-wrap">
+        <i class="icon fa fa-eercast" aria-hidden="true"></i>
+            <div>
+                <ul class="main-menu clean-list ">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li><a href="#about"><i class="fa fa-info-circle" aria-hidden="true"></i>about</a></li>
+                    <li><a href="#contact"><i class="fa fa-commenting-o" aria-hidden="true"></i></i>Contact</a></li>
+                </ul>
             </div>
 
 
-            <div class="search-container">
-
-                <div class="title">
-                    <h2>Meme creator</h2>
-                    <h5>choose your category</h5>
-                </div>
-
-                <div>
-                    <input type="search" placeholder="Search Meme" class="hidden">
-                </div>
-
-                <div class="search-icon" onclick="toggleHeaderElements()">
-                    <i class="icon fa fa-search" aria-hidden="true"></i>
-                </div>
-
+            <div class="search-box hidden">
+                <input type="search" placeholder="Search Meme" >
             </div>
+        <i class="icon fa fa-search" aria-hidden="true" onclick="toggleHeaderElements()"></i>
+        </div>-->
 
-            <!--<div class="search-icon" onclick="toggleSearchBox()">
-                <i class="icon fa fa-search" aria-hidden="true"></i>
-            </div>-->
-
-    </header> 
-    <!--<header>
-
-        <div class="nav-container container-wrap">
-            <i class="icon fa fa-eercast" aria-hidden="true"></i>
-            nav-container menu zone
-        </div>
-
-        <div class="search-container">
-            <input type="search" placeholder="Search Meme" >
-            <i class="icon fa fa-search" aria-hidden="true"></i>
-        </div>
-
-    </header>-->
-
+        <!--</header> -->
+    
+    
+    <header>
+        <nav class="flexy-nav container-wrap">
+            <div id="flexy-nav__toggle" class="flexy-nav__toggle"><i class="fa fa-eercast" aria-hidden="true"></i></div>
+            <ul id="flexy-nav__items" class="flexy-nav__items">
+                <li class="flexy-nav__item"><a href="#" class="flexy-nav__link"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
+                <li class="flexy-nav__item"><a href="#about" class="flexy-nav__link"> <i class="fa fa-info-circle" aria-hidden="true"></i><span> About</span></a></li>
+                <li class="flexy-nav__item"><a href="#contact" class="flexy-nav__link"><i class="fa fa-commenting-o" aria-hidden="true"></i><span> Contact</span></a></li>
+            </ul>
+            <form action="" class="flexy-nav__form">
+                <input class="flexy-nav__search" type="text" placeholder=" Type search terms and hit enter...">
+            </form>
+        </nav>
+    </header>
+    
     <main>
 
         <div class="content container-wrap">
