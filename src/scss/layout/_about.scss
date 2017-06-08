@@ -15,7 +15,7 @@
         justify-content: flex-start;
         border-bottom: 1px solid rgba(255,255,255,0.2);
 
-        @media screen and (min-width: $xs) {
+        @media screen and (min-width: $md) {
             padding: 2em;
             flex-direction: row-reverse;
             justify-content: flex-end;
@@ -50,7 +50,7 @@
     flex-direction: column-reverse ;
     justify-content: flex-end;
     
-    @media screen and (min-width: $xs) {
+    @media screen and (min-width: $md) {
             flex-direction: row;
             justify-content: flex-start;
         }

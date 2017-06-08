@@ -107,7 +107,7 @@ button {
 }
 
 
-@media all and (min-width: 627px) {
+@media all and (min-width: $sm) {
   .flexy-nav {
     flex-direction: row;
   }
