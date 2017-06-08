@@ -95,7 +95,7 @@ button:last-child {
 
 .main.offset {
     position: absolute;
-    left: -101vw;
+    left: 2000px;
     transition: all, 0.5s;
 }
 
