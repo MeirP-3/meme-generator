@@ -21,40 +21,20 @@ function filter(searchKeys) { // if search-icon is toggled and the input is not 
     console.log(filtered);
 }
 
-function showSearchBox() {
-    var box = document.querySelector('.search-container input');
-    if (box.classList.contains('hidden')) {
-        box.classList.remove('hidden');
-    }
-}
-
 function toggleHeaderElements() {
-    var elSearchBox = document.querySelector('.search-container');
-    var elNavBar = document.querySelector('.navigation');
-    var elTitle = document.querySelector('header .title');
+    var elSearchBox = document.querySelector('.search-box');
+    // var elNavBar = document.querySelector('.navigation');
+    // var elTitle = document.querySelector('header .title');
 
     if (elSearchBox.classList.contains('hidden')) {
         elSearchBox.classList.remove('hidden');
-        elNavBar.classList.add('hidden');
 
     } else {
         elSearchBox.classList.add('hidden');
-        elNavBar.classList.remove('hidden');
+       
     }
 }
 
-
-////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////
 
@@ -92,3 +72,14 @@ function renderTagCloud() {
 
 }
 
+
+// ------------------ NAVIGATION FUNCTION ------------------------
+
+(function() {
+  var toggle = document.querySelector("#flexy-nav__toggle");
+  var nav = document.querySelector("#flexy-nav__items");
+  toggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    nav.classList.contains("flexy-nav__items--visible") ? nav.classList.remove("flexy-nav__items--visible") : nav.classList.add("flexy-nav__items--visible");
+  });
+})();
