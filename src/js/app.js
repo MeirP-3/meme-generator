@@ -6,7 +6,7 @@ var TOP_COLOR = 'yellow';
 var BOTTOM_COLOR = "yellow";
 var NONE = 'none';
 var TOP = 'top';
-var BOTTOM = 'botom';
+var BOTTOM = 'bottom';
 
 var gState = {
     selectedImgId: `img-${getRandomIntInclusive(1, 9)}`,
@@ -165,6 +165,7 @@ function init() {
 
     /////////////////////////////////////// handle show-hide edit tools ///////////////////////////////////////////
     $(document).click(function () {
+        gState.alignBarFor = NONE;
         $('.align').addClass('offset');
     });
 
@@ -172,25 +173,19 @@ function init() {
         e.stopPropagation();
     });
 
-    $('textarea').click(function (e) {
+    $('.top textarea').click(function (e) {
+        if (gState.alignBarFor === BOTTOM) {
+            gState.alignBarFor = TOP;
+        }
         e.stopPropagation();
     })
 
-    // $('.top .tools').click(function (e) {
-    //     e.stopPropagation();
-    // });
-
-    // $('.bottom textarea').focus(function (e) {
-    //     // $('.bottom .main').removeClass('offset');
-    //     var height = $(document).height();
-    //     $('html, body').animate({ scrollTop: height }, 600);
-    //     e.stopPropagation();
-    // })
-
-    // $('.bottom textarea').focusout(function(e) {
-    //     $('.bottom .main').addClass('hidden');
-    //     e.stopPropagation();
-    // })
+    $('.bottom textarea').click(function (e) {
+        if (gState.alignBarFor === TOP) {
+            gState.alignBarFor = BOTTOM;
+        }
+        e.stopPropagation();
+    })
 
     /////////////////////////////////////// handle show-hide text align bar ///////////////////////////////////////////
 
