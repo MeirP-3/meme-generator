@@ -1,14 +1,142 @@
 html, body {
-    height: 100%;
+    background-color: #550000;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
 
-body {
+.editor {
+    margin: 5px;
+}
+
+.controls {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+}
+
+textarea, .btn-toolbar, canvas {
+    margin: 0;
+    margin-top: 5px;
+}
+
+nav {
+    min-height: 60px;
+    margin: 0;
+}
+
+.btns {
+    position: relative;
+}
+
+
+.btn-toolbar {
+    display: flex;
+}
+
+button {
+    flex-grow: 1;
+    min-width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: #666;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button.create-img, button.tools {
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+button:hover {
+    background-color: #eee;
+    transition: 0.2s;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.align {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 10px;
+    position: absolute;
+    left: 0;
+    transition: all, 0.5s;
+}
+
+.align.offset {
+    left: -70px;
+    transition: all, 0.5s;
+}
+
+.main {
+    position: relative;
+    left: 0;
+    transition: all, 0.5s;
+}
+
+.main.offset {
+    position: absolute;
+    left: -101vw;
+    transition: all, 0.5s;
+}
+
+.align > button {
+    background-color: #98102E;
+    color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.canvas-container {
+    display: flex;
 }
 
 canvas {
-    max-width: 100%;
+    width: 100%;
+}
+
+textarea { 
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px; 
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #98102E;
+    border-width: 2px;
+}
+
+.txtarea-plus {
+    display: flex;
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+.hidden {
+    display: none;
 }

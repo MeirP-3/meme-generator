@@ -4,7 +4,7 @@ var gImgs = [
         id: 'img-1',
         url: {
             lg: 'assets/img/lg/img-1.jpg',
-            sm: 'assets/img/sm/img-1-sm.png'
+            sm: 'assets/img/sm/img-1-sm.jpg'
         },
         keywords: [
             'chalange',
