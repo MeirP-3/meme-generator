@@ -110,7 +110,7 @@ button {
   outline: none;
   border: solid 2px #eca200; }
 
-@media all and (min-width: 627px) {
+@media all and (min-width: 450px) {
   .flexy-nav {
     flex-direction: row; }
   .flexy-nav__items {
@@ -179,8 +179,7 @@ button {
 .item-container {
   padding: 5px 10px; }
   .item-container:hover {
-    opacity: 0.5;
-    border: 1px solid white; }
+    opacity: 0.5; }
   .item-container .item-img {
     width: 80px;
     height: 80px;
@@ -298,7 +297,7 @@ header .icon {
     flex-direction: column-reverse;
     justify-content: flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-    @media screen and (min-width: 400px) {
+    @media screen and (min-width: 650px) {
       .about-section .card {
         padding: 2em;
         flex-direction: row-reverse;
@@ -320,7 +319,7 @@ header .icon {
 .card:nth-child(odd) {
   flex-direction: column-reverse;
   justify-content: flex-end; }
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 650px) {
     .card:nth-child(odd) {
       flex-direction: row;
       justify-content: flex-start; } }
