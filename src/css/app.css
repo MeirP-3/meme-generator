@@ -93,12 +93,6 @@ button:last-child {
     transition: all, 0.5s;
 }
 
-.main.offset {
-    position: absolute;
-    left: 2000px;
-    transition: all, 0.5s;
-}
-
 .align > button {
     background-color: #98102E;
     color: white;
