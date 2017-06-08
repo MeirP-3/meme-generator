@@ -48,9 +48,13 @@ button {
     transition: 0.2s;
 }
 
-button.create-img, button.tools {
+button.color {
+    color: #d46a6a;
+}
+
+button.create-img {
     margin-left: 5px;
-    border-radius: 50%;
+    color: green;
     background-color: #fff;
 }
 
