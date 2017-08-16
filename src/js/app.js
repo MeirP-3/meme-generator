@@ -277,10 +277,12 @@ function init() {
     ////////////////////////////////////////////////////////////////////////////////////////
     //                                  export image
     ////////////////////////////////////////////////////////////////////////////////////////
-    $('.create-img').click(function () {
+    var exportImg = $('.create-img');
+    exportImg.click(function () {
         var canvas = $('canvas')[0];
         var resultImg = canvas.toDataURL('image/jpg');
         var link = $('<a href='+resultImg+' download>');
+        exportImg.append(link);
         link.click();
     });
 }
