@@ -6,8 +6,8 @@
 * Techs used: jQuery, Sass.
 
 ## Authors:
-* [Meir Pechthalt] (https://www.linkedin.com/in/meir-pechthalt-a712b8146/)
-* [Tamir Kitay] (https://www.linkedin.com/in/tamir-k-41135062/)
+* [Meir Pechthalt](https://www.linkedin.com/in/meir-pechthalt-a712b8146/)
+* [Tamir Kitay](https://www.linkedin.com/in/tamir-k-41135062/)
 
 
 ## To play with the code:
