@@ -283,6 +283,6 @@ function init() {
         var resultImg = canvas.toDataURL('image/jpg');
         var link = $('<a href='+resultImg+' download>');
         exportImg.append(link);
-        link.click();
+        //link.click();
     });
 }
