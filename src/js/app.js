@@ -281,8 +281,9 @@ function init() {
     exportImg.click(function () {
         var canvas = $('canvas')[0];
         var resultImg = canvas.toDataURL('image/jpg');
-        var link = $('<a href='+resultImg+' download>');
-        exportImg.append(link);
+        console.log(resultImg);
+        //var link = $('<a href='+resultImg+' download>');
+        //exportImg.append(link);
         //link.click();
     });
 }
